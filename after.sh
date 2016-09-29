@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 echo "Composer"
-php /home/vagrant/imports/composer.phar update
+php /home/vagrant/importservice/composer.phar update
 
 echo "Running migrations"
-php /home/vagrant/imports/artisan migrate
+php /home/vagrant/importservice/artisan migrate
 
 echo "Installing Supervisor"
 sudo apt-get install supervisor -y > /dev/null
