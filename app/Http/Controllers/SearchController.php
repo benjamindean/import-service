@@ -32,9 +32,12 @@ class SearchController extends Controller
      */
     public function show(Request $request)
     {
-        $this->params = $request->all();
+        $this->params = array(
+            'name' => $request->get('name'),
+            'address' => $request->get('address'),
+            'team' => $request->get('team')
+        );
         $this->limit = $request->get('limit', 50);
-        unset($this->params['limit']);
 
         if(array_filter($this->params)) {
             DB::connection()->disableQueryLog();
