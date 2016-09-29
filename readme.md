@@ -10,7 +10,7 @@ The only requirement is [Vagrant](https://www.vagrantup.com/).
 
 1. Clone the repository
 2. Add configs for Homestead and Mailer
-3. `vagrant up`
+3. Run `make`
 
 ### Server Requirements
 
