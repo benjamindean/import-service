@@ -34,6 +34,7 @@ class SearchController extends Controller
     {
         $this->params = $request->all();
         $this->limit = $request->get('limit', 50);
+        unset($this->params['limit']);
 
         if(array_filter($this->params)) {
             DB::connection()->disableQueryLog();
