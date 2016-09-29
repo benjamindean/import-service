@@ -28,7 +28,7 @@ class UploadController extends Controller
     {
         // Validating Email and File inputs
         $this->validate($request, [
-            'csv_file' => 'required|mimes:text/csv,csv,txt',
+            'csv_file' => 'required|mimes:csv,txt',
             'email' => 'required|email'
         ]);
 
