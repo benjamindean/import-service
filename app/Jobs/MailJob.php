@@ -40,7 +40,7 @@ class MailJob extends Job
         $mailer = app('mailer');
         $mailer->to($this->email)->send(new ImportMail(
             "Your import of $this->fileName file is finished",
-            gmdate("H:i:s", round((microtime(true) - $this->timeStart), 3)),
+            gmdate("H:i:s", (microtime(true) - $this->timeStart)),
             $this->rowCount
         ));
     }
