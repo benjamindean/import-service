@@ -1,4 +1,4 @@
-$(function ($) {
+jQuery(function ($) {
 
     var label = $('.file-input-name');
     $('.file-input').on('change', function (e) {
@@ -72,4 +72,4 @@ $(function ($) {
         }
     }
 
-})(jQuery);
+});
